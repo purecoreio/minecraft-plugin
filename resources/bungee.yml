@@ -1,0 +1,4 @@
+name: purecore
+main: io.purecore.core.bungee.Main
+version: 1.0-PRE
+author: quiquelhappy

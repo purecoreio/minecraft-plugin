@@ -1,0 +1,17 @@
+keys:
+  network: "MAIN_NETWORK_KEY" # network api key
+  server: "SERVER_INSTANCE_KEY" # if you're running a bungeecord instance, this will be ignored
+
+  # your network instance is the Main account ID for your network, this will relate all the data
+  # to a single network. you CAN run multiple network instances.
+
+  # your server instance is the server ID used in spigot servers for stats and
+  # other basic functions. You'll need to change this in order to provide basic functions
+  # to your spigot server! This type of instance usage is limited by your plan.
+
+  # this two options are NOT using the Key ID. These are using the Key HASH. So, don't show them
+  # to nobody!
+
+update:
+  version: "1"
+  timestamp: 0

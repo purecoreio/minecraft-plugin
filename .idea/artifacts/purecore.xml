@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="purecore">
+    <output-path>$PROJECT_DIR$/out/artifacts/purecore</output-path>
+    <root id="archive" name="purecore.jar">
+      <element id="module-output" name="purecore" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/keys.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/resources/bungee.yml" />
+    </root>
+  </artifact>
+</component>
