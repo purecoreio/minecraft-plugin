@@ -47,12 +47,12 @@ public class Connection {
 
 
                 // TO-DO
-                return null;
 
 
             }
         }
 
+        return null;
     }
 
 }
