@@ -2,6 +2,7 @@ package io.purecore.core.api;
 
 import com.google.common.base.Charsets;
 import com.google.common.io.CharStreams;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import io.purecore.core.api.exception.ServerApiError;
@@ -13,8 +14,177 @@ import java.nio.charset.StandardCharsets;
 import java.time.Instant;
 import java.util.*;
 
+import static io.purecore.core.api.util.JsonTransform.connectionFromJSON;
+
 
 public class Core {
+
+    public static List<CoreConnection> closePlayerConnections(UUID player_uuid, CoreKey key) throws IOException, ServerApiError {
+
+        String postkey = key.getHash();
+
+        URL url = new URL("https://api.purecore.io/rest/1/connection/close/all/");
+        Map<String, Object> params = new LinkedHashMap<>();
+        params.put("uuid", player_uuid.toString());
+        params.put("key", postkey);
+
+        // ------ QUERY
+
+        StringBuilder postData = new StringBuilder();
+        for (Map.Entry<String, Object> param : params.entrySet()) {
+            if (postData.length() != 0) postData.append('&');
+            postData.append(URLEncoder.encode(param.getKey(),"UTF-8"));
+            postData.append('=');
+            postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
+        }
+        byte[] postDataBytes = postData.toString().getBytes(StandardCharsets.UTF_8);
+
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
+        conn.setDoOutput(true);
+        conn.getOutputStream().write(postDataBytes);
+
+        // ----- RESULT
+
+        String body = CharStreams.toString(new InputStreamReader(conn.getInputStream(), Charsets.UTF_8));
+
+        if(new JsonParser().parse(body).isJsonObject()){
+            JsonObject result = new JsonParser().parse(body).getAsJsonObject();
+            if(result.has("error")){
+
+                String msgidtotal = Long.toString(Instant.now().toEpochMilli());
+                String msgid = msgidtotal.length() > 2 ? msgidtotal.substring(msgidtotal.length() - 2) : msgidtotal;
+
+                throw new ServerApiError(result.get("error").getAsString());
+
+            } else {
+                throw new ServerApiError("Unknown response");
+            }
+        } else {
+            List<CoreConnection> connectionList = new ArrayList<CoreConnection>();
+            JsonArray result = new JsonParser().parse(body).getAsJsonArray();
+            result.forEach((dt) ->
+            {
+                if (dt.isJsonObject())
+                {
+                    JsonObject connectionjson = dt.getAsJsonObject();
+                    connectionList.add(connectionFromJSON(connectionjson));
+
+                }
+            });
+            return connectionList;
+        }
+    }
+
+    public static List<CoreConnection> getPlayerOpenConnections(UUID player_uuid, CoreKey key) throws IOException, ServerApiError {
+
+        String postkey = key.getHash();
+
+        URL url = new URL("https://api.purecore.io/rest/1/connection/get/open/");
+        Map<String, Object> params = new LinkedHashMap<>();
+        params.put("uuid", player_uuid.toString());
+        params.put("key", postkey);
+
+        // ------ QUERY
+
+        StringBuilder postData = new StringBuilder();
+        for (Map.Entry<String, Object> param : params.entrySet()) {
+            if (postData.length() != 0) postData.append('&');
+            postData.append(URLEncoder.encode(param.getKey(),"UTF-8"));
+            postData.append('=');
+            postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
+        }
+        byte[] postDataBytes = postData.toString().getBytes(StandardCharsets.UTF_8);
+
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
+        conn.setDoOutput(true);
+        conn.getOutputStream().write(postDataBytes);
+
+        // ----- RESULT
+
+        String body = CharStreams.toString(new InputStreamReader(conn.getInputStream(), Charsets.UTF_8));
+
+        if(new JsonParser().parse(body).isJsonObject()){
+            JsonObject result = new JsonParser().parse(body).getAsJsonObject();
+            if(result.has("error")){
+
+                String msgidtotal = Long.toString(Instant.now().toEpochMilli());
+                String msgid = msgidtotal.length() > 2 ? msgidtotal.substring(msgidtotal.length() - 2) : msgidtotal;
+
+                throw new ServerApiError(result.get("error").getAsString());
+
+            } else {
+                throw new ServerApiError("Unknown response");
+            }
+        } else {
+            List<CoreConnection> connectionList = new ArrayList<CoreConnection>();
+            JsonArray result = new JsonParser().parse(body).getAsJsonArray();
+            result.forEach((dt) ->
+            {
+                if (dt.isJsonObject())
+                {
+                    JsonObject connectionjson = dt.getAsJsonObject();
+                    connectionList.add(connectionFromJSON(connectionjson));
+
+                }
+            });
+            return connectionList;
+        }
+    }
+
+    public static CoreConnection closeConnection(String connection_uuid, CoreKey key) throws IOException, ServerApiError {
+
+        String postkey = key.getHash();
+
+        URL url = new URL("https://api.purecore.io/rest/1/connection/close/");
+        Map<String, Object> params = new LinkedHashMap<>();
+        params.put("connection", connection_uuid);
+        params.put("key", postkey);
+
+        // ------ QUERY
+
+        StringBuilder postData = new StringBuilder();
+        for (Map.Entry<String, Object> param : params.entrySet()) {
+            if (postData.length() != 0) postData.append('&');
+            postData.append(URLEncoder.encode(param.getKey(),"UTF-8"));
+            postData.append('=');
+            postData.append(URLEncoder.encode(String.valueOf(param.getValue()), "UTF-8"));
+        }
+        byte[] postDataBytes = postData.toString().getBytes(StandardCharsets.UTF_8);
+
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("POST");
+        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        conn.setRequestProperty("Content-Length", String.valueOf(postDataBytes.length));
+        conn.setDoOutput(true);
+        conn.getOutputStream().write(postDataBytes);
+
+        // ----- RESULT
+
+        String body = CharStreams.toString(new InputStreamReader(conn.getInputStream(), Charsets.UTF_8));
+
+        JsonObject result = new JsonParser().parse(body).getAsJsonObject();
+
+        if(result.has("error")){
+
+            String msgidtotal = Long.toString(Instant.now().toEpochMilli());
+            String msgid = msgidtotal.length() > 2 ? msgidtotal.substring(msgidtotal.length() - 2) : msgidtotal;
+
+            throw new ServerApiError(result.get("error").getAsString());
+
+        } else {
+
+            CoreConnection connection = connectionFromJSON(result);
+            return connection;
+
+        }
+
+    }
 
     public static CoreConnection newConnection(InetSocketAddress ip, UUID minecraft_uuid, String minecraft_username, CoreKey key) throws IOException, ServerApiError {
 
@@ -62,43 +232,7 @@ public class Core {
 
         } else {
 
-            JsonObject playerdata = result.get("player").getAsJsonObject();
-            CorePlayer player = new CorePlayer(playerdata.get("username").getAsString(),UUID.fromString(playerdata.get("uuid").getAsString()),playerdata.get("verified").getAsBoolean());
-
-            JsonObject statusdata = result.get("status").getAsJsonObject();
-
-            String closedon = null;
-            if(!statusdata.get("closedOn").isJsonNull()){
-                closedon=statusdata.get("closedOn").getAsString();
-            }
-
-            CoreConnectionStatus status = new CoreConnectionStatus(statusdata.get("closed").getAsBoolean(),closedon,statusdata.get("openedOn").getAsString());
-
-            JsonObject locationdata = result.get("location").getAsJsonObject();
-            CoreLocation location = new CoreLocation(locationdata.get("country").getAsString(),locationdata.get("region").getAsString(),locationdata.get("city").getAsString());
-
-            JsonObject instancedata = result.get("instance").getAsJsonObject();
-            String instancetypestring = instancedata.get("type").getAsString();
-
-            CoreInstance.InstanceType instancetype;
-
-            if(instancetypestring == "NTW"){
-
-                instancetype = CoreInstance.InstanceType.NTW;
-
-            } else if(instancetypestring == "SVR"){
-
-                instancetype = CoreInstance.InstanceType.SVR;
-
-            } else {
-
-                instancetype = CoreInstance.InstanceType.DEV;
-
-            }
-
-            CoreInstance instance = new CoreInstance(instancetype,instancedata.get("uuid").getAsString(),instancedata.get("name").getAsString());
-
-            CoreConnection connection = new CoreConnection(result.get("uuid").getAsString(),location,status,player,instance);
+            CoreConnection connection = connectionFromJSON(result);
             return connection;
 
         }

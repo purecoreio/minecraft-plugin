@@ -2,6 +2,7 @@ package io.purecore.core.bungee;
 
 import com.google.gson.Gson;
 import io.purecore.core.bungee.events.Join;
+import io.purecore.core.bungee.events.Leave;
 import io.purecore.core.console.utils.Msgs;
 import io.purecore.core.console.utils.Title;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -20,12 +21,9 @@ import java.util.Random;
 
 public class Main extends Plugin {
 
-    public static Title titlemanager = new Title();
-    public static Msgs msgmanager = new Msgs();
-    public static Configuration config = null;
+    private static Title titlemanager = new Title();
+    private static Configuration config = null;
     public static Configuration keys = null;
-
-    public static Gson gson = new Gson();
 
     @Override
     public void onEnable() {
@@ -47,12 +45,13 @@ public class Main extends Plugin {
 
         if(!configresult&&!keysresult){
 
-            msgmanager.showError("LOADER","couldn't load the basic config files (keys.yml and/or config.yml)");
+            Msgs.showError("LOADER","couldn't load the basic config files (keys.yml and/or config.yml)");
             this.onDisable();
 
         } else {
 
             getProxy().getPluginManager().registerListener(this, new Join());
+            getProxy().getPluginManager().registerListener(this, new Leave());
 
         }
 
@@ -64,7 +63,7 @@ public class Main extends Plugin {
     public void onDisable() {
 
         // funny gag xd lmao so funny
-        List<String> givenList = Arrays.asList("sketit", "bye bye lol", "see ya", "taluego", "despacito says goodbye to u");
+        List<String> givenList = Arrays.asList("sketit", "bye bye lol", "see ya", "taluego", "despacito says goodbye to u","I'm in love with the coco","drink water!","prolly nobody reads this UwU","UwU more like OwO hehe","dab on the creepers","Meme review will Will Smith (inc)");
         Random rand = new Random();
         String randomgoodbye = givenList.get(rand.nextInt(givenList.size()));
 
@@ -104,7 +103,7 @@ public class Main extends Plugin {
                 Files.copy(in, file.toPath()); // copy the data from res and paste the file into the folder
             } catch (IOException e) {
 
-                msgmanager.showError("CONFIG",e.getMessage()); // error, proly not enough perms or disk size
+                Msgs.showError("CONFIG",e.getMessage()); // error, proly not enough perms or disk size
 
             }
         }
@@ -117,13 +116,13 @@ public class Main extends Plugin {
                 config.set("update.timestamp", System.currentTimeMillis());
             }
 
-            msgmanager.showWarning("CONFIG","loaded config");
+            Msgs.showWarning("CONFIG","loaded config");
 
             return true;
 
         } catch (IOException e) {
 
-            msgmanager.showError("CONFIG",e.getMessage()); // error, proly not enough perms or disk size
+            Msgs.showError("CONFIG",e.getMessage()); // error, proly not enough perms or disk size
             return false;
 
         }
@@ -148,7 +147,7 @@ public class Main extends Plugin {
                 Files.copy(in, file.toPath()); // copy the data from res and paste the file into the folder
             } catch (IOException e) {
 
-                msgmanager.showError("KEYS",e.getMessage()); // error, proly not enough perms or disk size
+                Msgs.showError("KEYS",e.getMessage()); // error, proly not enough perms or disk size
 
             }
         }
@@ -161,13 +160,13 @@ public class Main extends Plugin {
                 keys.set("update.timestamp", System.currentTimeMillis());
             }
 
-            msgmanager.showWarning("CONFIG","loaded keys");
+            Msgs.showWarning("CONFIG","loaded keys");
 
             return true;
 
         } catch (IOException e) {
 
-            msgmanager.showError("KEYS",e.getMessage()); // error, proly not enough perms or disk size
+            Msgs.showError("KEYS",e.getMessage()); // error, proly not enough perms or disk size
             return false;
 
         }

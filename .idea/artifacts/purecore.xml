@@ -5,7 +5,7 @@
       <element id="file-copy" path="$PROJECT_DIR$/resources/config.yml" />
       <element id="file-copy" path="$PROJECT_DIR$/resources/keys.yml" />
       <element id="file-copy" path="$PROJECT_DIR$/resources/bungee.yml" />
-      <element id="module-output" name="core" />
+      <element id="module-output" name="plugin" />
     </root>
   </artifact>
 </component>

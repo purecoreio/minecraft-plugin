@@ -5,6 +5,7 @@ import io.purecore.core.api.exception.ServerApiError;
 import io.purecore.core.api.type.CoreConnection;
 import io.purecore.core.api.type.CoreKey;
 import io.purecore.core.bungee.Main;
+import io.purecore.core.console.utils.Msgs;
 import net.md_5.bungee.api.event.LoginEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
@@ -26,9 +27,9 @@ public class Join implements Listener
 
         try{
             CoreConnection connection = Core.newConnection(ip,uuid,name,key);
-            de.jakobniklas.util.Log.print("COREAPI","Opened connection #"+connection.getUuid());
+            Msgs.showWarning("CONNECTION CREATION","Opened connection #"+connection.getUuid());
         } catch (IOException | ServerApiError e) {
-            de.jakobniklas.util.Log.print("COREAPI","Error while creating a new connection: "+e.getMessage());
+            Msgs.showError("CONNECTION CREATION",e.getMessage());
         }
 
     }
