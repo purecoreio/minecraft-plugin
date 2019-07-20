@@ -2,28 +2,43 @@ package io.purecore.core.api.type;
 
 import java.util.UUID;
 
-public class CoreInstance {
+public class CoreConnection {
 
 
-    UUID uuid;
+    String uuid;
     CoreLocation location;
     CoreConnectionStatus status;
     CorePlayer player;
     CoreInstance instance;
 
-    public CoreInstance(String error, String msg)
+    public CoreConnection(String instance_uuid, CoreLocation location, CoreConnectionStatus status, CorePlayer player, CoreInstance instance)
     {
 
-        this.error = error;
-        this.msg = msg;
+        this.uuid=instance_uuid;
+        this.location=location;
+        this.status=status;
+        this.player=player;
+        this.instance=instance;
 
     }
 
-    public String getError() {
-        return error;
+    public String getUuid() {
+        return uuid;
     }
 
-    public String getMsg() {
-        return msg;
+    public CoreConnectionStatus getStatus() {
+        return status;
+    }
+
+    public CoreInstance getInstance() {
+        return instance;
+    }
+
+    public CoreLocation getLocation() {
+        return location;
+    }
+
+    public CorePlayer getPlayer() {
+        return player;
     }
 }

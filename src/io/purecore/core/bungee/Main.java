@@ -1,6 +1,7 @@
 package io.purecore.core.bungee;
 
 import com.google.gson.Gson;
+import io.purecore.core.bungee.events.Join;
 import io.purecore.core.console.utils.Msgs;
 import io.purecore.core.console.utils.Title;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -51,7 +52,7 @@ public class Main extends Plugin {
 
         } else {
 
-
+            getProxy().getPluginManager().registerListener(this, new Join());
 
         }
 
