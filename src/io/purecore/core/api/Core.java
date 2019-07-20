@@ -10,9 +10,9 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,25 +32,18 @@ public class Connection {
 
         List<NameValuePair> params = new ArrayList<NameValuePair>(2);
 
-        params.add(new BasicNameValuePair("ip", "12345"));
-        params.add(new BasicNameValuePair("uuid", "Hello!"));
-        params.add(new BasicNameValuePair("username", "Hello!"));
-        params.add(new BasicNameValuePair("key", "Hello!"));
+        params.add(new BasicNameValuePair("ip", postip));
+        params.add(new BasicNameValuePair("uuid", postuuid));
+        params.add(new BasicNameValuePair("username", minecraft_username));
+        params.add(new BasicNameValuePair("key", postkey));
 
         httppost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
 
         HttpResponse response = httpclient.execute(httppost);
         HttpEntity entity = response.getEntity();
 
-        if (entity != null) {
-            try (InputStream instream = entity.getContent()) {
-
-
-                // TO-DO
-
-
-            }
-        }
+        String responseString = EntityUtils.toString(entity, "UTF-8");
+        System.out.println(responseString);
 
         return null;
     }
