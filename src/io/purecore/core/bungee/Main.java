@@ -1,8 +1,5 @@
 package io.purecore.core.bungee;
 
-import com.google.gson.Gson;
-import io.purecore.core.bungee.events.Join;
-import io.purecore.core.bungee.events.Leave;
 import io.purecore.core.console.utils.Msgs;
 import io.purecore.core.console.utils.Title;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -18,12 +15,16 @@ import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.logging.Logger;
 
 public class Main extends Plugin {
 
     private static Title titlemanager = new Title();
     private static Configuration config = null;
-    public static Configuration keys = null;
+    static Configuration keys = null;
+    static Logger logger = null;
+    static boolean debug = false;
+    static Plugin plugin = null;
 
     @Override
     public void onEnable() {
@@ -31,7 +32,9 @@ public class Main extends Plugin {
 
         // plugin startup
 
-        titlemanager.showTitle("starting up plugin");
+        titlemanager.showTitle("starting up bungeecord instance");
+        plugin=this;
+        logger=getLogger();
 
         // config starter/prev loading
 
@@ -45,13 +48,16 @@ public class Main extends Plugin {
 
         if(!configresult&&!keysresult){
 
-            Msgs.showError("LOADER","couldn't load the basic config files (keys.yml and/or config.yml)");
+            Msgs.showError(logger,"LOADER","couldn't load the basic config files (keys.yml and/or config.yml)");
             this.onDisable();
 
         } else {
 
-            getProxy().getPluginManager().registerListener(this, new Join());
-            getProxy().getPluginManager().registerListener(this, new Leave());
+            if(config.getBoolean("settings.debug")){
+                debug=true;
+            }
+
+            getProxy().getPluginManager().registerListener(this, new Events());
 
         }
 
@@ -73,102 +79,60 @@ public class Main extends Plugin {
 
     }
 
-    /*
-       _____             __ _         ______ _ _
-      / ____|           / _(_)       |  ____(_) |
-     | |     ___  _ __ | |_ _  __ _  | |__   _| | ___  ___
-     | |    / _ \| '_ \|  _| |/ _` | |  __| | | |/ _ \/ __|
-     | |___| (_) | | | | | | | (_| | | |    | | |  __/\__ \
-      \_____\___/|_| |_|_| |_|\__, | |_|    |_|_|\___||___/
-                               __/ |
-                              |___/
-     */
-
+    // .yml files copying
 
     private boolean updateConfig(){
 
         boolean newkid = false; // used for checking if the file is new later
-
         if (!getDataFolder().exists()){ // check if plugin folder config exists
             boolean mkdir = getDataFolder().mkdir();
         }
-
         File file = new File(getDataFolder(), "config.yml"); // load future file
-
         if (!file.exists()) { // check if the file is already on the folder (if negative)
             try (InputStream in = getResourceAsStream("config.yml")) { // load the config data from the plugin res
-
                 newkid = true;
-
                 Files.copy(in, file.toPath()); // copy the data from res and paste the file into the folder
             } catch (IOException e) {
-
-                Msgs.showError("CONFIG",e.getMessage()); // error, proly not enough perms or disk size
-
+                Msgs.showError(logger,"CONFIG",e.getMessage()); // error, proly not enough perms or disk size
             }
         }
 
         try {
-
             config = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(getDataFolder(), "config.yml")); // load config into config public variable
-
             if(newkid){
                 config.set("update.timestamp", System.currentTimeMillis());
             }
-
-            Msgs.showWarning("CONFIG","loaded config");
-
             return true;
-
         } catch (IOException e) {
-
-            Msgs.showError("CONFIG",e.getMessage()); // error, proly not enough perms or disk size
+            Msgs.showError(logger,"CONFIG",e.getMessage()); // error, proly not enough perms or disk size
             return false;
-
         }
-
     }
 
     private boolean updateKeys(){
-
         boolean newkid = false; // used for checking if the file is new later
-
         if (!getDataFolder().exists()){ // check if plugin folder config exists
-            boolean mkdir = getDataFolder().mkdir();
+            getDataFolder().mkdir();
         }
-
         File file = new File(getDataFolder(), "keys.yml"); // load future file
-
-        if (!file.exists()) { // check if the file is already on the folder (if negative)
-            try (InputStream in = getResourceAsStream("keys.yml")) { // load the config data from the plugin res
-
+        if (!file.exists()) {
+            try (InputStream in = getResourceAsStream("keys.yml")) {
                 newkid = true;
-
-                Files.copy(in, file.toPath()); // copy the data from res and paste the file into the folder
+                Files.copy(in, file.toPath());
             } catch (IOException e) {
-
-                Msgs.showError("KEYS",e.getMessage()); // error, proly not enough perms or disk size
-
+                Msgs.showError(logger,"KEYS",e.getMessage());
             }
         }
 
         try {
-
             keys = ConfigurationProvider.getProvider(YamlConfiguration.class).load(new File(getDataFolder(), "keys.yml")); // load config into config public variable
-
             if(newkid){
                 keys.set("update.timestamp", System.currentTimeMillis());
             }
-
-            Msgs.showWarning("CONFIG","loaded keys");
-
             return true;
-
         } catch (IOException e) {
-
-            Msgs.showError("KEYS",e.getMessage()); // error, proly not enough perms or disk size
+            Msgs.showError(logger,"KEYS",e.getMessage()); // error, proly not enough perms or disk size
             return false;
-
         }
 
     }

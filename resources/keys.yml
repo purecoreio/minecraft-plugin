@@ -1,17 +1,37 @@
 keys:
-  network: "MAIN_NETWORK_KEY" # network api key
-  server: "SERVER_INSTANCE_KEY" # if you're running a bungeecord instance, this will be ignored
 
-  # your network instance is the Main account ID for your network, this will relate all the data
-  # to a single network. you CAN run multiple network instances.
+  # --------------------------------------------------------------
+  #
+  # Hello and Welcome to Core!
+  # You need to replace the following values with your API Keys
+  # You can setup your network and server instances and get your
+  # API Keys here:
+  #
+  # https://purecore.io/dashboard/wizard
+  #
+  # If  you're using a proxy instance, you don't have to replace
+  # your server key, since it won't be used.
+  # If you're using a spigot/game instance, you must replace both
+  # "network" and "server" keys.
+  #
+  # If you need any help or your instance is not working, please,
+  # dont leave a bad review on Spigot and contact us here, we
+  # usually reply in under an hour :)
+  #
+  # https://purecore.io/help
+  #
+  # --------------------------------------------------------------
 
-  # your server instance is the server ID used in spigot servers for stats and
-  # other basic functions. You'll need to change this in order to provide basic functions
-  # to your spigot server! This type of instance usage is limited by your plan.
-
-  # this two options are NOT using the Key ID. These are using the Key HASH. So, don't show them
-  # to nobody!
+  network: "YOUR_NETWORK_KEY_HERE"
+  server: "YOUR_SERVER_KEY_HERE"
 
 update:
+
+  # --------------------------------------------------------------
+  #
+  # Do not change this values!
+  #
+  # --------------------------------------------------------------
+
   version: "1"
   timestamp: 0

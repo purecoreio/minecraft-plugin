@@ -1,13 +1,17 @@
 package io.purecore.core.console.utils;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Msgs {
 
-    public static void showWarning(String classerror, String classmsg){
-        System.out.println("[CORE] ["+classerror+"] -> "+classmsg); // show general warning, debug info
+    public static void showWarning(Logger logger, String classerror, String classmsg){
+
+        logger.log(Level.WARNING, "["+classerror.toLowerCase()+"] -> "+classmsg);
     }
 
-    public static void showError(String classerror, String classmsg){
-        System.out.println("[CORE] [!!!] ["+classerror+"] -> "+classmsg); // show severe errors or important info
+    public static void showError(Logger logger, String classerror, String classmsg){
+        logger.log(Level.SEVERE, "[!!!] ["+classerror.toLowerCase()+"] -> "+classmsg);
     }
 
 }

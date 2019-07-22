@@ -1,3 +1,35 @@
+settings:
+
+  # --------------------------------------------------------------
+  #
+  # If the plugin is not working as expected, please, review the
+  # file "keys.yml" first! You need to setup your keys in order
+  # for the plugin to work!
+  #
+  # If the after replacing your keys the plugin is still not
+  # working properly you can enable "settings->debug->true"
+  # in order to see the complete debug log.
+  #
+  # Always check your console log! It might provide useful data
+  # and it might be letting you know what is going on!
+  #
+  # If you need any help or your instance is not working, please,
+  # dont leave a bad review on Spigot and contact us here, we
+  # usually reply in under an hour :)
+  #
+  # https://purecore.io/help
+  #
+  # --------------------------------------------------------------
+
+  debug: false
+
 update:
+
+  # --------------------------------------------------------------
+  #
+  # Do not change this values!
+  #
+  # --------------------------------------------------------------
+
   version: "1"
   timestamp: 0
