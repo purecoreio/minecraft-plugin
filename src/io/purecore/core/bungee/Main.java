@@ -1,5 +1,9 @@
 package io.purecore.core.bungee;
 
+<<<<<<< HEAD
+import io.purecore.core.bungee.Tasks.MarkPendingExecutions;
+=======
+>>>>>>> 8a66d20f794f2f5ca89a6a0d0433b5ad7f0682d3
 import io.purecore.core.console.utils.Msgs;
 import io.purecore.core.console.utils.Title;
 import net.md_5.bungee.api.plugin.Plugin;
@@ -15,16 +19,27 @@ import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+<<<<<<< HEAD
+import java.util.concurrent.TimeUnit;
+=======
+>>>>>>> 8a66d20f794f2f5ca89a6a0d0433b5ad7f0682d3
 import java.util.logging.Logger;
 
 public class Main extends Plugin {
 
     private static Title titlemanager = new Title();
     private static Configuration config = null;
+<<<<<<< HEAD
+    public static Configuration keys = null;
+    static Logger logger = null;
+    static boolean debug = false;
+    public static Plugin plugin = null;
+=======
     static Configuration keys = null;
     static Logger logger = null;
     static boolean debug = false;
     static Plugin plugin = null;
+>>>>>>> 8a66d20f794f2f5ca89a6a0d0433b5ad7f0682d3
 
     @Override
     public void onEnable() {
@@ -56,13 +71,18 @@ public class Main extends Plugin {
             if(config.getBoolean("settings.debug")){
                 debug=true;
             }
+<<<<<<< HEAD
+=======
 
             getProxy().getPluginManager().registerListener(this, new Events());
 
         }
+>>>>>>> 8a66d20f794f2f5ca89a6a0d0433b5ad7f0682d3
+
+            getProxy().getScheduler().schedule(this, new MarkPendingExecutions(), 1, 30, TimeUnit.SECONDS); // execute pending commands every 30 seconds
 
 
-
+        }
     }
 
     @Override
