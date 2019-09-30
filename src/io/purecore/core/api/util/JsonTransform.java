@@ -42,8 +42,7 @@ public class JsonTransform {
         CoreInstance instance = new CoreInstance(instancetype,instancedata.get("uuid").getAsString(),instancedata.get("name").getAsString());
 
         // final format
-        CoreConnection connection = new CoreConnection(core_connection_json.get("uuid").getAsString(),location,status,player,instance);
-        return connection;
+        return new CoreConnection(core_connection_json.get("uuid").getAsString(),location,status,player,instance);
     }
 
     public static CoreExecution executionFromJSON(JsonObject core_execution_json){
@@ -118,8 +117,7 @@ public class JsonTransform {
         });
         boolean executed = execution.get("executed").getAsBoolean();
 
-        CoreExecution final_core_execution = new CoreExecution(execution_id,core_command,command_context,instance_list,needsOnline,instance_list_executed,executed,quantity);
-        return final_core_execution;
+        return new CoreExecution(execution_id,core_command,command_context,instance_list,needsOnline,instance_list_executed,executed,quantity);
     }
 
 }
