@@ -1,11 +1,8 @@
 package io.purecore.core.spigot;
 
 import io.purecore.core.console.utils.Title;
-<<<<<<< HEAD
 import io.purecore.core.spigot.Tasks.MarkPendingExecutions;
 import org.bukkit.Bukkit;
-=======
->>>>>>> 8a66d20f794f2f5ca89a6a0d0433b5ad7f0682d3
 import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -58,12 +55,9 @@ public class Main extends JavaPlugin {
             }
 
             getServer().getPluginManager().registerEvents(new Events(), this);
-<<<<<<< HEAD
 
             Bukkit.getScheduler().scheduleSyncRepeatingTask(this,new MarkPendingExecutions(), 1, 600L);
 
-=======
->>>>>>> 8a66d20f794f2f5ca89a6a0d0433b5ad7f0682d3
         }
 
     }
@@ -71,11 +65,8 @@ public class Main extends JavaPlugin {
     public void onDisable() {
 
         // funny gag xd lmao so funny
-<<<<<<< HEAD
         List<String> givenList = Arrays.asList("sketit", "bye bye lol", "see ya", "taluego", "despacito says goodbye to u","I'm in love with the coco","drink water!","prolly nobody reads this UwU","UwU more like OwO hehe","dab on the creepers","Meme review with Will Smith (inc)");
-=======
-        List<String> givenList = Arrays.asList("sketit", "bye bye lol", "see ya", "taluego", "despacito says goodbye to u","I'm in love with the coco","drink water!","prolly nobody reads this UwU","UwU more like OwO hehe","dab on the creepers","Meme review will Will Smith (inc)");
->>>>>>> 8a66d20f794f2f5ca89a6a0d0433b5ad7f0682d3
+
         Random rand = new Random();
         String randomgoodbye = givenList.get(rand.nextInt(givenList.size()));
 
