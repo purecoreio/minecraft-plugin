@@ -72,7 +72,6 @@ public class Core {
         }
     }
 
-<<<<<<< HEAD
     public static List<CoreExecution> getPendingExecutions(CoreKey key) throws IOException, ServerApiError {
 
         String postkey = key.getHash();
@@ -189,8 +188,6 @@ public class Core {
         }
     }
 
-=======
->>>>>>> 8a66d20f794f2f5ca89a6a0d0433b5ad7f0682d3
     public static CoreConnection newConnection(InetSocketAddress ip, UUID minecraft_uuid, String minecraft_username, CoreKey key) throws IOException, ServerApiError {
 
         String postip = ip.getAddress().getHostAddress();
