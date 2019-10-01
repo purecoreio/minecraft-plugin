@@ -4,6 +4,7 @@ import io.purecore.core.api.type.CoreKey;
 import io.purecore.core.console.utils.Msgs;
 import io.purecore.core.spigot.Tasks.CloseSpigotConnections;
 import io.purecore.core.spigot.Tasks.CreateSpigotConnection;
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -19,19 +20,12 @@ public class Events implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event)
     {
 
-        if(Objects.requireNonNull(event.getPlayer().getAddress()).getAddress()!=null){
+        UUID uuid = event.getPlayer().getUniqueId();
+        String name = event.getPlayer().getName();
+        InetSocketAddress ip = event.getPlayer().getAddress();
+        CoreKey key = new CoreKey(Main.keys.getString("keys.server"));
 
-            UUID uuid = event.getPlayer().getUniqueId();
-            String name = event.getPlayer().getName();
-            InetSocketAddress ip = event.getPlayer().getAddress();
-            CoreKey key = new CoreKey(Main.keys.getString("keys.server"));
-
-            CreateSpigotConnection createSpigotConnection = new CreateSpigotConnection(Main.debug,Main.logger,ip,uuid,name,key);
-            createSpigotConnection.start();
-
-        } else {
-            Msgs.showError(Main.logger,"CONNECTION CREATION","Received player address was invalid");
-        }
+        Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new CreateSpigotConnection(Main.debug,Main.logger,ip,uuid,name,key));
 
     }
 
@@ -41,8 +35,7 @@ public class Events implements Listener {
         UUID uuid = event.getPlayer().getUniqueId();
         CoreKey key = new CoreKey(Main.keys.getString("keys.server"));
 
-        CloseSpigotConnections CloseSpigotConnections = new CloseSpigotConnections(Main.debug,Main.logger,uuid,key);
-        CloseSpigotConnections.start();
+        Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new CloseSpigotConnections(Main.debug,Main.logger,uuid,key));
 
     }
 

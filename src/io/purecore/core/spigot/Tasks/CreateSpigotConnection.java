@@ -11,7 +11,7 @@ import java.net.InetSocketAddress;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-public class CreateSpigotConnection extends Thread {
+public class CreateSpigotConnection implements Runnable {
     private boolean debug;
     private Logger logger;
     private InetSocketAddress ip;

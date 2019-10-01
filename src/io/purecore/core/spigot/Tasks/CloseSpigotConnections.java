@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-public class CloseSpigotConnections extends Thread {
+public class CloseSpigotConnections implements Runnable {
 
     private boolean debug;
     private Logger logger;
