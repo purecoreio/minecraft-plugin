@@ -13,9 +13,16 @@ import java.util.List;
 import java.util.UUID;
 
 public class MarkPendingExecutions implements Runnable {
+
+    private CoreKey key;
+
+    public MarkPendingExecutions(CoreKey key){
+        this.key=key;
+    }
+
     @Override
     public void run() {
-        CoreKey key = new CoreKey(Main.keys.getString("keys.server"));
+
         try {
             List<CoreExecution> executionlist = Core.getPendingExecutions(key);
             for (CoreExecution execution: executionlist) {
@@ -30,8 +37,6 @@ public class MarkPendingExecutions implements Runnable {
                         if(player.getName().equals(username) ||player.getUniqueId()==uuid){ // if it finds the player it executes the command
                             if(Core.markExecution(key,execution)){
                                 Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString() );
-                            } else {
-
                             }
                         }
 
@@ -41,8 +46,6 @@ public class MarkPendingExecutions implements Runnable {
 
                     if(Core.markExecution(key,execution)){
                         Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString() );
-                    } else {
-
                     }
 
                 }

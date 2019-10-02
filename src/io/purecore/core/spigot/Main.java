@@ -1,5 +1,6 @@
 package io.purecore.core.spigot;
 
+import io.purecore.core.api.type.CoreKey;
 import io.purecore.core.console.utils.Title;
 import io.purecore.core.spigot.Tasks.MarkPendingExecutions;
 import org.bukkit.Bukkit;
@@ -54,10 +55,13 @@ public class Main extends JavaPlugin {
                 debug=true;
             }
 
+            // start event listener
             getServer().getPluginManager().registerEvents(new Events(), this);
 
-            Bukkit.getScheduler().scheduleSyncRepeatingTask(this,new MarkPendingExecutions(), 1, 600L);
+            // schedule repeating tasks
+            CoreKey key = new CoreKey(Main.keys.getString("keys.server"));
 
+            Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, () -> Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new MarkPendingExecutions(key)), 0L, 300L);
         }
 
     }
