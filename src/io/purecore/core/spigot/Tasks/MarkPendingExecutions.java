@@ -4,6 +4,7 @@ import io.purecore.core.api.Core;
 import io.purecore.core.api.exception.ServerApiError;
 import io.purecore.core.api.type.CoreExecution;
 import io.purecore.core.api.type.CoreKey;
+import io.purecore.core.console.utils.Msgs;
 import io.purecore.core.spigot.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -11,6 +12,7 @@ import org.bukkit.entity.Player;
 import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.ExecutionException;
 
 public class MarkPendingExecutions implements Runnable {
 
@@ -36,7 +38,11 @@ public class MarkPendingExecutions implements Runnable {
 
                         if(player.getName().equals(username) ||player.getUniqueId()==uuid){ // if it finds the player it executes the command
                             if(Core.markExecution(key,execution)){
-                                Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString() );
+                                try {
+                                    Bukkit.getScheduler().callSyncMethod( Main.plugin, () -> Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString())).get();
+                                } catch (InterruptedException | ExecutionException e) {
+                                    Msgs.showError(Main.logger,"command execution","error while executing pending command: "+e.getMessage());
+                                }
                             }
                         }
 
@@ -45,7 +51,11 @@ public class MarkPendingExecutions implements Runnable {
                 } else { // the player doesn't need to be online in order to execute the command
 
                     if(Core.markExecution(key,execution)){
-                        Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString() );
+                        try {
+                            Bukkit.getScheduler().callSyncMethod( Main.plugin, () -> Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString())).get();
+                        } catch (InterruptedException | ExecutionException e) {
+                            Msgs.showError(Main.logger,"command execution","error while executing pending command: "+e.getMessage());
+                        }
                     }
 
                 }
