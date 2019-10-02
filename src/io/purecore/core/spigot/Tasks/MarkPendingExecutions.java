@@ -37,27 +37,29 @@ public class MarkPendingExecutions implements Runnable {
                     for (Player player:Main.plugin.getServer().getOnlinePlayers()) {
 
                         if(player.getName().equals(username) ||player.getUniqueId()==uuid){ // if it finds the player it executes the command
-                            if(Core.markExecution(key,execution)){
-                                try {
-                                    Bukkit.getScheduler().callSyncMethod( Main.plugin, () -> Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString())).get();
-                                } catch (InterruptedException | ExecutionException e) {
-                                    Msgs.showError(Main.logger,"command execution","error while executing pending command: "+e.getMessage());
+                            try {
+                                Bukkit.getScheduler().callSyncMethod( Main.plugin, () -> Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString())).get();
+                                Core.markExecution(key,execution);
+                                if(Main.debug){
+                                    Msgs.showWarning(Main.logger,"command execution","execution #"+execution.getUuid()+" updated");
                                 }
+                            } catch (InterruptedException | ExecutionException e) {
+                                Msgs.showError(Main.logger,"command execution","error while executing pending command: "+e.getMessage());
                             }
                         }
 
                     }
 
                 } else { // the player doesn't need to be online in order to execute the command
-
-                    if(Core.markExecution(key,execution)){
-                        try {
-                            Bukkit.getScheduler().callSyncMethod( Main.plugin, () -> Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString())).get();
-                        } catch (InterruptedException | ExecutionException e) {
-                            Msgs.showError(Main.logger,"command execution","error while executing pending command: "+e.getMessage());
+                    try {
+                        Bukkit.getScheduler().callSyncMethod( Main.plugin, () -> Bukkit.dispatchCommand( Bukkit.getConsoleSender(), execution.getCommand().getString())).get();
+                        Core.markExecution(key,execution);
+                        if(Main.debug){
+                            Msgs.showWarning(Main.logger,"command execution","execution #"+execution.getUuid()+" updated");
                         }
+                    } catch (InterruptedException | ExecutionException e) {
+                        Msgs.showError(Main.logger,"command execution","error while executing pending command: "+e.getMessage());
                     }
-
                 }
             }
         } catch (IOException | ServerApiError e) {
