@@ -61,7 +61,7 @@ public class Main extends JavaPlugin {
             // schedule repeating tasks
             CoreKey key = new CoreKey(Main.keys.getString("keys.server"));
 
-            Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, () -> Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new MarkPendingExecutions(key)), 0L, 300L);
+            this.getServer().getScheduler().scheduleSyncRepeatingTask(this,new MarkPendingExecutions(this,key),0L,300L);
         }
 
     }

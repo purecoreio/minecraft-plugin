@@ -7,6 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4657aa4-41d5-4df1-83b9-cb52c57d1fe6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/purecore/purecore.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/purecore/purecore.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Events.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/CloseSpigotConnections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/CloseSpigotConnections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/CreateSpigotConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/CreateSpigotConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/MarkPendingExecutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/MarkPendingExecutions.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

@@ -25,17 +25,18 @@ public class Events implements Listener {
         InetSocketAddress ip = event.getPlayer().getAddress();
         CoreKey key = new CoreKey(Main.keys.getString("keys.server"));
 
-        Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new CreateSpigotConnection(Main.debug,Main.logger,ip,uuid,name,key));
+        new CreateSpigotConnection(Main.plugin,Main.debug,Main.logger,ip,uuid,name,key).run();
 
     }
 
     @EventHandler
-    public void onPlayerQuit(PlayerQuitEvent event){
+    public void onPlayerQuit(PlayerQuitEvent event)
+    {
 
         UUID uuid = event.getPlayer().getUniqueId();
         CoreKey key = new CoreKey(Main.keys.getString("keys.server"));
 
-        Bukkit.getScheduler().runTaskAsynchronously(Main.plugin, new CloseSpigotConnections(Main.debug,Main.logger,uuid,key));
+        new CloseSpigotConnections(Main.plugin, Main.debug,Main.logger,uuid,key).run();
 
     }
 
