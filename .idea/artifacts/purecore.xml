@@ -2,7 +2,7 @@
   <artifact type="jar" name="purecore">
     <output-path>$PROJECT_DIR$/out/artifacts/purecore</output-path>
     <root id="archive" name="purecore.jar">
-      <element id="module-output" name="core" />
+      <element id="module-output" name="purecore" />
       <element id="dir-copy" path="$PROJECT_DIR$/resources" />
     </root>
   </artifact>

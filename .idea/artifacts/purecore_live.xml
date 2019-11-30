@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="purecore live">
+    <output-path>$USER_HOME$/Desktop/testing/mc/spigot/plugins</output-path>
+    <root id="archive" name="purecore.jar" />
+  </artifact>
+</component>

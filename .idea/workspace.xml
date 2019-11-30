@@ -3,47 +3,11 @@
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="purecore" />
+      <artifact name="purecore live" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4657aa4-41d5-4df1-83b9-cb52c57d1fe6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/io/purecore/core/api/type/CoreAdvancement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/io/purecore/core/api/util/json/transform.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/UpdateAdvancements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/io/purecore/core/utils/advancements/getAdvancements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/purecore/purecore.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/purecore/purecore.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/api/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/api/Core.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/api/type/CoreConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/api/type/CoreConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/api/util/JsonTransform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/bungee/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/bungee/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/bungee/Tasks/CloseBungeeConnections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/bungee/Tasks/CloseBungeeConnections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/bungee/Tasks/CreateBungeeConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/bungee/Tasks/CreateBungeeConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/bungee/Tasks/MarkPendingExecutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/bungee/Tasks/MarkPendingExecutions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/console/utils/Msgs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/utils/console/Msgs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/console/utils/Title.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/utils/console/Title.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Events.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/CloseSpigotConnections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/CloseSpigotConnections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/CreateSpigotConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/CreateSpigotConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/MarkPendingExecutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/core/spigot/Tasks/MarkPendingExecutions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/api/Core.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/api/Core.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/api/util/JsonTransform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/bungee/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/bungee/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/bungee/Tasks/CloseBungeeConnections.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/bungee/Tasks/CloseBungeeConnections.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/bungee/Tasks/CreateBungeeConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/bungee/Tasks/CreateBungeeConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/bungee/Tasks/MarkPendingExecutions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/bungee/Tasks/MarkPendingExecutions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/console/utils/Msgs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/console/utils/Title.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Events.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Events.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/CloseSpigotConnections$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/CloseSpigotConnections$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/CreateSpigotConnection$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/CreateSpigotConnection$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/MarkPendingExecutions$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/MarkPendingExecutions$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/MarkPendingExecutions$1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/MarkPendingExecutions$1$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/MarkPendingExecutions$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/MarkPendingExecutions$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/MarkPendingExecutions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/core/spigot/Tasks/MarkPendingExecutions.class" afterDir="false" />
-    </list>
+    <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,18 +21,28 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProjectId" id="1RbCxUMqsx1NC53RLit0tX5Djd7" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1SEWfIuK0GWMsD6nxyRL4Rub301" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="purecore" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="io.purecore.plugin" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -87,25 +61,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e4657aa4-41d5-4df1-83b9-cb52c57d1fe6" name="Default Changelist" comment="" />
-      <created>1569829784187</created>
+      <changelist id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="" />
+      <created>1571129336018</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569829784187</updated>
+      <updated>1571129336018</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
