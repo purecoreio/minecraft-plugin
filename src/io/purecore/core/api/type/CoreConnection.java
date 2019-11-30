@@ -1,7 +1,5 @@
 package io.purecore.core.api.type;
 
-import java.util.UUID;
-
 public class CoreConnection {
 
 

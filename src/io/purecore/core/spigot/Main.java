@@ -1,9 +1,9 @@
 package io.purecore.core.spigot;
 
 import io.purecore.core.api.type.CoreKey;
-import io.purecore.core.console.utils.Title;
+import io.purecore.core.utils.console.Title;
 import io.purecore.core.spigot.Tasks.MarkPendingExecutions;
-import org.bukkit.Bukkit;
+import io.purecore.core.utils.console.Msgs;
 import org.bukkit.configuration.Configuration;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -48,7 +48,7 @@ public class Main extends JavaPlugin {
         // keys
         createKeyConfig();
         if(keys==null||config==null){
-            io.purecore.core.console.utils.Msgs.showError(logger,"KEYS","Error while loading keys/settings config file, please, review your write/read permissions and your config structure");
+            Msgs.showError(logger,"KEYS","Error while loading keys/settings config file, please, review your write/read permissions and your config structure");
         } else {
 
             if(config.getBoolean("settings.debug")){

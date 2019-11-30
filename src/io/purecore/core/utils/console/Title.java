@@ -1,4 +1,4 @@
-package io.purecore.core.console.utils;
+package io.purecore.core.utils.console;
 
 public class Title {
 

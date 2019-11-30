@@ -4,7 +4,7 @@ import io.purecore.core.api.Core;
 import io.purecore.core.api.exception.ServerApiError;
 import io.purecore.core.api.type.CoreConnection;
 import io.purecore.core.api.type.CoreKey;
-import io.purecore.core.console.utils.Msgs;
+import io.purecore.core.utils.console.Msgs;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

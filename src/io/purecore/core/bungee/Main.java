@@ -1,8 +1,8 @@
 package io.purecore.core.bungee;
 
 import io.purecore.core.bungee.Tasks.MarkPendingExecutions;
-import io.purecore.core.console.utils.Msgs;
-import io.purecore.core.console.utils.Title;
+import io.purecore.core.utils.console.Msgs;
+import io.purecore.core.utils.console.Title;
 import net.md_5.bungee.api.plugin.Plugin;
 
 import net.md_5.bungee.config.Configuration;

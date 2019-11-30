@@ -30,8 +30,6 @@ public class MarkPendingExecutions implements Runnable {
                         if(player.getName().equals(username) ||player.getUniqueId()==uuid){ // if it finds the player it executes the command
                             if(Core.markExecution(key,execution)){
                                 Main.plugin.getProxy().getPluginManager().dispatchCommand(Main.plugin.getProxy().getConsole(), execution.getCommand().getString());
-                            } else {
-
                             }
                         }
 
@@ -41,8 +39,6 @@ public class MarkPendingExecutions implements Runnable {
 
                     if(Core.markExecution(key,execution)){
                         Main.plugin.getProxy().getPluginManager().dispatchCommand(Main.plugin.getProxy().getConsole(), execution.getCommand().getString());
-                    } else {
-
                     }
 
                 }

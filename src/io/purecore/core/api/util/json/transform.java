@@ -1,14 +1,34 @@
-package io.purecore.core.api.util;
+package io.purecore.core.api.util.json;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import io.purecore.core.api.type.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-public class JsonTransform {
+public class transform {
+
+    public static List<CoreAdvancement> advancementsFromJson(JsonArray core_advancement_list){
+
+        List<CoreAdvancement> advancements = new ArrayList<>();
+
+        for (int i = 0; core_advancement_list.size() < i; i++) {
+            JsonObject core_advancemnt = core_advancement_list.get(i).getAsJsonObject();
+
+            // advancement
+            String key = core_advancemnt.get("key").getAsString();
+            Date date = new Date(core_advancemnt.get("date").getAsLong());
+            CoreAdvancement advancement = new CoreAdvancement(key,date);
+
+            advancements.add(advancement);
+        }
+
+        return advancements;
+
+    }
 
     public static CoreConnection connectionFromJSON(JsonObject core_connection_json){
 
@@ -119,5 +139,4 @@ public class JsonTransform {
 
         return new CoreExecution(execution_id,core_command,command_context,instance_list,needsOnline,instance_list_executed,executed,quantity);
     }
-
 }

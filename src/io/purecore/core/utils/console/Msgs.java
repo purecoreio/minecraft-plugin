@@ -1,4 +1,4 @@
-package io.purecore.core.console.utils;
+package io.purecore.core.utils.console;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
