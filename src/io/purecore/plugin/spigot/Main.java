@@ -59,7 +59,11 @@ public class Main extends JavaPlugin {
     public void onEnable() {
 
         super.onEnable();
-        plugin = this;
+        this.plugin = this;
+
+        if(!this.getServer().getOnlineMode()){
+            this.getServer().getPluginManager().disablePlugin(this);
+        }
 
         keysFile = new File(getDataFolder(), "keys.yml");
         if (!keysFile.exists()) {
@@ -191,6 +195,6 @@ public class Main extends JavaPlugin {
     public void onDisable() {
         super.onDisable();
         HandlerList.unregisterAll(this);
-        Logging.logError(this.getLogger(), Logging.Class.STARTUP,"Disabling plugin");
+        Logging.logError(this.getLogger(), Logging.Class.STARTUP,"Disabling plugin, are you running on an offline mode server?");
     }
 }
