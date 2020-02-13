@@ -29,6 +29,21 @@ public class Key {
 
     }
 
+    public Instance getInstance() {
+        return instance;
+    }
+
+    public String getHash() {
+        return hash;
+    }
+
+    public Key(JsonObject json){
+        this.keyType=Type.valueOf(json.get("type").getAsString());
+        this.uuid=json.get("uuid").getAsString();
+        this.hash=json.get("hash").getAsString();
+        this.instance=new Instance(new Core(this),json.get("instance").getAsJsonObject());
+    }
+
     public String regenHash() throws ApiException, IOException, CallException {
 
         Core core = new Core(this.hash);

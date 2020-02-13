@@ -1,5 +1,7 @@
 package io.purecore.plugin.spigot;
 
+import com.google.common.io.ByteArrayDataInput;
+import com.google.common.io.ByteStreams;
 import io.purecore.api.Core;
 import io.purecore.api.exception.ApiException;
 import io.purecore.api.exception.CallException;
@@ -24,12 +26,16 @@ import org.bukkit.event.HandlerList;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.messaging.PluginMessageListener;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-public class Main extends JavaPlugin {
+public class Main extends JavaPlugin implements PluginMessageListener {
+
+    public static boolean onlineModeFromBungeeCord = false;
+    public static boolean linkedWithBungeeCord = false;
 
     // runtime pending values
 
@@ -61,9 +67,41 @@ public class Main extends JavaPlugin {
         super.onEnable();
         this.plugin = this;
 
-        if(!this.getServer().getOnlineMode()){
-            this.getServer().getPluginManager().disablePlugin(this);
+        Boolean bungee = false;
+        try {
+            bungee = this.getServer().spigot().getConfig().getBoolean("settings.bungeecord");
+        } catch (NullPointerException e){
+            Logging.logError(this.getLogger(), Logging.Class.STARTUP,"Couldn't check if the server is running under a bungeecord instance, is your spigot.yml missing or corrupted?");
         }
+
+        if(!this.getServer().getOnlineMode() && !bungee){
+            Logging.logError(this.getLogger(), Logging.Class.STARTUP,"Your server is running under an offline mode server and doesn't have the bungeecord setting activated. You need to enable bungeecord in offline mode servers if  you want to use purecore, as we only accept data from verified player uuids");
+            this.getServer().getPluginManager().disablePlugin(this);
+        } else if(this.getServer().getOnlineMode()){
+            Logging.logInfo(this.getLogger(),Logging.Class.STARTUP, "This server is running on an online mode server, executing startup procedure");
+            this.initialStartup();
+        } else if(!this.getServer().getOnlineMode() && bungee){
+            Logging.logInfo(this.getLogger(),Logging.Class.STARTUP, "This server is running on an offline mode server, but you're running under a bungeecord connection, wait while we check your bungeecord settings in order to confirm the authenticity of this server");
+            this.getServer().getScheduler().scheduleSyncDelayedTask(this, new Runnable() {
+                @Override
+                public void run() {
+                    if(linkedWithBungeeCord && onlineModeFromBungeeCord){
+                        Logging.logInfo(Main.plugin.getLogger(),Logging.Class.STARTUP, "The authenticity of the server has been verified");
+                        initialStartup();
+                    } else if(!linkedWithBungeeCord) {
+                        Logging.logError(Main.plugin.getLogger(),Logging.Class.STARTUP, "We haven't received any response from your bungeecord instance, is it active? Have you installed purecore on your proxy?");
+                        plugin.getServer().getPluginManager().disablePlugin(plugin);
+                    } else {
+                        Logging.logError(Main.plugin.getLogger(),Logging.Class.STARTUP, "The proxy instance is running in offline mode");
+                        plugin.getServer().getPluginManager().disablePlugin(plugin);
+                    }
+                }
+            },20*2);
+        }
+
+    }
+
+    private void initialStartup(){
 
         keysFile = new File(getDataFolder(), "keys.yml");
         if (!keysFile.exists()) {
@@ -196,5 +234,18 @@ public class Main extends JavaPlugin {
         super.onDisable();
         HandlerList.unregisterAll(this);
         Logging.logError(this.getLogger(), Logging.Class.STARTUP,"Disabling plugin, are you running on an offline mode server?");
+    }
+
+    @Override
+    public void onPluginMessageReceived(String s, Player player, byte[] bytes) {
+        if(!s.equals("purecore")){
+            return;
+        } else {
+            linkedWithBungeeCord=true;
+        }
+        ByteArrayDataInput subchannel = ByteStreams.newDataInput(bytes);
+        if(subchannel.equals("authenticity")){
+            onlineModeFromBungeeCord = subchannel.readBoolean();
+        }
     }
 }

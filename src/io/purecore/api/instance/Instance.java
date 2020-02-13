@@ -12,6 +12,8 @@ import io.purecore.api.exception.CallException;
 import io.purecore.api.request.ArrayRequest;
 import io.purecore.api.request.ObjectRequest;
 import io.purecore.api.user.Player;
+import io.purecore.core.api.type.CoreInstance;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -29,6 +31,14 @@ public class Instance extends io.purecore.api.Core {
         UNK
     }
 
+    public Instance(Core core, JsonObject json){
+        super(core.getKey());
+        this.core=core;
+        this.uuid=json.get("uuid").getAsString();
+        this.name=json.get("name").getAsString();
+        this.instanceType= Type.valueOf(json.get("type").getAsString());
+    }
+
     public Instance(Core core, String uuid, String name, Type type) {
         super(core.getKey());
         this.core=core;
@@ -43,6 +53,18 @@ public class Instance extends io.purecore.api.Core {
         params.put("ip", address.getAddress().getHostAddress());
         params.put("uuid", player.getUUID().toString());
         params.put("username", player.getUsername());
+
+        JsonObject result = new ObjectRequest(this.core, ObjectRequest.Call.CONNECTION_CREATE, params).getResult();
+        return new Connection(this.core,result);
+
+    }
+
+    public Connection openConnection(ProxiedPlayer player) throws ApiException, IOException, CallException {
+
+        LinkedHashMap<String, String> params = new LinkedHashMap<>();
+        params.put("ip", player.getAddress().getAddress().getHostAddress());
+        params.put("uuid", player.getUniqueId().toString());
+        params.put("username", player.getName());
 
         JsonObject result = new ObjectRequest(this.core, ObjectRequest.Call.CONNECTION_CREATE, params).getResult();
         return new Connection(this.core,result);
@@ -74,28 +96,23 @@ public class Instance extends io.purecore.api.Core {
 
         ObjectRequest request = new ObjectRequest(this.core, ObjectRequest.Call.INSTANCE_GET);
         JsonElement response = request.getResult();
-        if(response.getAsJsonObject().has("server")){
-
-            this.instanceType=Type.SVR;
-            JsonObject responseJson = response.getAsJsonObject().get("server").getAsJsonObject();
-            this.uuid = responseJson.get("uuid").getAsString();
-            this.name = responseJson.get("name").getAsString();
-
-        } else if(response.getAsJsonObject().has("network")){
-
-            this.instanceType=Type.NTW;
-            JsonObject responseJson = response.getAsJsonObject().get("network").getAsJsonObject();
-            this.uuid = responseJson.get("uuid").getAsString();
-            this.name = responseJson.get("name").getAsString();
-
-        } else {
-
-            this.instanceType=Type.UNK;
-            this.uuid = null;
-            this.name = null;
-
+        if(response.getAsJsonObject().has("server") && response.getAsJsonObject().has("network")){
+            if(!response.getAsJsonObject().get("server").isJsonNull()){
+                this.instanceType=Type.SVR;
+                JsonObject responseJson = response.getAsJsonObject().get("server").getAsJsonObject();
+                this.uuid = responseJson.get("uuid").getAsString();
+                this.name = responseJson.get("name").getAsString();
+            } else if(!response.getAsJsonObject().get("network").isJsonNull()){
+                this.instanceType=Type.NTW;
+                JsonObject responseJson = response.getAsJsonObject().get("network").getAsJsonObject();
+                this.uuid = responseJson.get("uuid").getAsString();
+                this.name = responseJson.get("name").getAsString();
+            } else {
+                this.instanceType=Type.UNK;
+                this.uuid = null;
+                this.name = null;
+            }
         }
-
     }
 
     public List<Execution> getPendingExecutions() throws ApiException, IOException, CallException {

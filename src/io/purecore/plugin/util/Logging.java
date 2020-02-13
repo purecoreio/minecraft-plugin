@@ -25,15 +25,15 @@ public class Logging {
 
     public static void showBigError(Logger logger, String error){
 
-        logger.log(Level.INFO, " _ __   _   _  _ __  ___   ___  ___   _ __  ___ ");
-        logger.log(Level.INFO, "| '_ \\ | | | || '__|/ _ \\ / __|/ _ \\ | '__|/ _ \\");
-        logger.log(Level.INFO, "| |_) || |_| || |  |  __/| (__| (_) || |  |  __/");
-        logger.log(Level.INFO, "| .__/  \\__,_||_|   \\___| \\___|\\___/ |_|   \\___|");
-        logger.log(Level.INFO, "|_|                                             ");
-        logger.log(Level.INFO, "");
-        logger.log(Level.INFO, "→ Error:");
-        logger.log(Level.INFO, error);
-        logger.log(Level.INFO, "");
+        logger.log(Level.SEVERE, " _ __   _   _  _ __  ___   ___  ___   _ __  ___ ");
+        logger.log(Level.SEVERE, "| '_ \\ | | | || '__|/ _ \\ / __|/ _ \\ | '__|/ _ \\");
+        logger.log(Level.SEVERE, "| |_) || |_| || |  |  __/| (__| (_) || |  |  __/");
+        logger.log(Level.SEVERE, "| .__/  \\__,_||_|   \\___| \\___|\\___/ |_|   \\___|");
+        logger.log(Level.SEVERE, "|_|                                             ");
+        logger.log(Level.SEVERE, "");
+        logger.log(Level.SEVERE, "→ Error:");
+        logger.log(Level.SEVERE, error);
+        logger.log(Level.SEVERE, "");
 
     }
 

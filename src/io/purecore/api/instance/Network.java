@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import io.purecore.api.Core;
 import io.purecore.api.exception.ApiException;
 import io.purecore.api.exception.CallException;
+import io.purecore.api.key.Key;
 import io.purecore.api.punishment.Offence;
 import io.purecore.api.request.ArrayRequest;
 
@@ -28,8 +29,8 @@ public class Network extends Instance {
         this.type=type;
     }
 
-    public Network(JsonObject json){
-        super(new Core(null),null,null,Type.NTW);
+    public Network(Core core, JsonObject json){
+        super(core,null,null,Type.NTW);
 
         String uuid = null;
         if(!json.get("uuid").isJsonNull()){
@@ -63,6 +64,17 @@ public class Network extends Instance {
             finalList.add(new Offence(offenceJson.getAsJsonObject()));
         }
         return finalList;
+    }
+
+    public List<Key> getAllKeys() throws ApiException, IOException, CallException {
+        List<Key> keyList = new ArrayList<>();
+        ArrayRequest request = new ArrayRequest(this.core, ArrayRequest.Call.GET_ALL_KEYS);
+        JsonArray response = request.getResult();
+        for (JsonElement key:response) {
+            JsonObject keyJson = key.getAsJsonObject();
+            keyList.add(new Key(keyJson));
+        }
+        return keyList;
     }
 
 

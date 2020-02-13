@@ -15,6 +15,13 @@ public class Core {
         this.key=key;
     }
 
+    public Core() {
+    }
+
+    public Core(Key key) {
+        this.key=key.getHash();
+    }
+
     public String getKey() {
         return key;
     }

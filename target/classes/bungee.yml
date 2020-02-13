@@ -1,4 +1,4 @@
 name: purecore
-main: io.purecore.core.bungee.Main
+main: io.purecore.plugin.bungee.Main
 version: 1.0-PRE
 author: quiquelhappy

@@ -8,12 +8,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/purecore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/purecore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/plugin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/io/purecore/plugin/bungee/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/io/purecore/plugin/bungee/cmd/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/io/purecore/plugin/bungee/events/Sessions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/purecore/purecore.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/purecore/purecore.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/bungee.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/bungee.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/api/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Instance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/api/instance/Instance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/api/instance/Network.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/key/Key.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/api/key/Key.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/punishment/Offence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/api/punishment/Offence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/request/ArrayRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/api/request/ArrayRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/io/purecore/plugin/spigot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/plugin/spigot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/plugin/util/Logging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/plugin/util/Logging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bungee.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bungee.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/Core.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/api/Core.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Instance$Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Instance$Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Instance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Instance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Network.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Network.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/key/Key.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/api/key/Key.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/punishment/Offence.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/api/punishment/Offence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ArrayRequest$Call.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ArrayRequest$Call.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ArrayRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ArrayRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/plugin/spigot/Main$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/plugin/spigot/Main$1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/plugin/spigot/Main$1$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/plugin/spigot/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/plugin/spigot/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/plugin/spigot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/plugin/spigot/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/plugin/util/Logging.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/purecore/plugin/util/Logging.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +61,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1SEWfIuK0GWMsD6nxyRL4Rub301" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -85,7 +111,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571129336018</updated>
-      <workItem from="1580473276660" duration="144000" />
+      <workItem from="1580473276660" duration="400000" />
+      <workItem from="1581512566568" duration="1764000" />
+      <workItem from="1581546007910" duration="21000" />
+      <workItem from="1581587828953" duration="11159000" />
     </task>
     <servers />
   </component>
@@ -93,13 +122,21 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1725" y="232" key="#com.intellij.ide.util.MemberChooser" timestamp="1581592854733">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1725" y="232" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1581592854733" />
+    <state x="1010" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581593814112">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1010" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1581593814112" />
     <state x="760" y="94" key="SettingsEditor" timestamp="1580473421937">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="760" y="94" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1580473421937" />
-    <state x="344" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1580473276631">
+    <state x="344" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1581587842760">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="344" y="343" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1580473276631" />
+    <state x="344" y="343" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1581587842760" />
   </component>
 </project>

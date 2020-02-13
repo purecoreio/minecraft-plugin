@@ -1,7 +1,7 @@
 package io.purecore.api.punishment;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import io.purecore.api.Core;
 import io.purecore.api.instance.Network;
 
 public class Offence {
@@ -30,7 +30,7 @@ public class Offence {
     public Offence(JsonObject json){
         this.uuid=json.get("uuid").getAsString();
         this.type=Type.valueOf(json.get("type").getAsString());
-        this.network=new Network(json.get("network").getAsJsonObject());
+        this.network=new Network(new Core(), json.get("network").getAsJsonObject());
         this.name=json.get("name").getAsString();
         this.description=json.get("description").getAsString();
         this.negativePoints=Integer.parseInt(json.get("negativePoints").getAsString());

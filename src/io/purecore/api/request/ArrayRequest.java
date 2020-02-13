@@ -32,7 +32,8 @@ public class ArrayRequest extends Core {
         UPDATE_PLAYER_ADVANCEMENTS,
         GET_PENDING_EXECUTIONS,
         GET_PENDING_EXECUTIONS_REDUCED,
-        GET_OFFENCE_LIST
+        GET_OFFENCE_LIST,
+        GET_ALL_KEYS
     }
 
     public ArrayRequest(Core core, Call call, LinkedHashMap<String, String> params){
@@ -63,6 +64,8 @@ public class ArrayRequest extends Core {
             url="cmds/get/pending/reduced/";
         } else if(this.call== Call.GET_OFFENCE_LIST){
             url="punishment/offence/list/";
+        } else if(this.call == Call.GET_ALL_KEYS){
+            url="key/list/all/";
         }
 
         if(url!=null){
