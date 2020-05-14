@@ -6,9 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="plugin" />
         <module name="purecore" />
+        <module name="mcplugin" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api" target="8" />
+      <module name="mcpluigin" target="8" />
+      <module name="plugin" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

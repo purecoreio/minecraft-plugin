@@ -1,9 +1,9 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="purecore">
+  <artifact type="jar" build-on-make="true" name="purecore">
     <output-path>$PROJECT_DIR$/out/artifacts/purecore</output-path>
     <root id="archive" name="purecore.jar">
       <element id="dir-copy" path="$PROJECT_DIR$/resources" />
-      <element id="module-output" name="plugin" />
+      <element id="module-output" name="mcplugin" />
     </root>
   </artifact>
 </component>

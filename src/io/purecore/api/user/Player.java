@@ -7,6 +7,7 @@ import io.purecore.api.exception.CallException;
 import io.purecore.api.punishment.Offence;
 import io.purecore.api.punishment.Punishment;
 import io.purecore.api.request.ObjectRequest;
+import io.purecore.api.voting.VotingSite;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
@@ -23,7 +24,6 @@ public class Player extends Core {
 
     public Player(Core core, String username, UUID uuid, boolean verified)
     {
-
         super(core.getKey());
         this.core=core;
         this.username = username;
@@ -51,6 +51,21 @@ public class Player extends Core {
 
     public Punishment punish(Player player, List<Offence> offenceList) throws ApiException, IOException, CallException {
         return new Punishment(this.core, player, this, offenceList);
+    }
+
+    public boolean vote(VotingSite site) throws ApiException, IOException, CallException {
+
+        LinkedHashMap<String,String> params = new LinkedHashMap<>();
+        if(site.uuid==null){
+            params.put("siteName",site.technicalName);
+        } else {
+            params.put("site",site.uuid);
+        }
+
+        params.put("player",this.coreid);
+        ObjectRequest request = new ObjectRequest(this.core, ObjectRequest.Call.VOTE_WITH_SITE, params);
+        request.getResult();
+        return true;
     }
 
     public String getCoreid() {

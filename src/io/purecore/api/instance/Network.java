@@ -9,9 +9,12 @@ import io.purecore.api.exception.CallException;
 import io.purecore.api.key.Key;
 import io.purecore.api.punishment.Offence;
 import io.purecore.api.request.ArrayRequest;
+import io.purecore.api.voting.VotingSite;
+import io.purecore.api.voting.VotingSiteConfig;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 public class Network extends Instance {
@@ -75,6 +78,18 @@ public class Network extends Instance {
             keyList.add(new Key(keyJson));
         }
         return keyList;
+    }
+
+    public List<VotingSiteConfig> getVotingSitesConfig() throws ApiException, IOException, CallException {
+        ArrayList<VotingSiteConfig> votingSiteConfigs = new ArrayList<VotingSiteConfig>();
+        ArrayRequest request = new ArrayRequest(this.getCore(), ArrayRequest.Call.GET_VOTING_SITES_CONFIG);
+        JsonArray result = request.getResult();
+        for (JsonElement votingSiteElement:result) {
+            JsonObject votingSiteObject = votingSiteElement.getAsJsonObject();
+            VotingSiteConfig votingSiteConfig = new VotingSiteConfig(this.getCore(), votingSiteObject);
+            votingSiteConfigs.add(votingSiteConfig);
+        }
+        return votingSiteConfigs;
     }
 
 

@@ -12,7 +12,6 @@ import io.purecore.api.exception.CallException;
 import io.purecore.api.request.ArrayRequest;
 import io.purecore.api.request.ObjectRequest;
 import io.purecore.api.user.Player;
-import io.purecore.core.api.type.CoreInstance;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 
 import java.io.IOException;

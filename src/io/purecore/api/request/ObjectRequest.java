@@ -30,7 +30,9 @@ public class ObjectRequest extends Core {
         MARK_EXECUTION,
         PLAYER_FROM_USERNAME,
         CREATE_PUNISHMENT,
-        REGEN_HASH
+        REGEN_HASH,
+        SETUP_VOTING_SITE,
+        VOTE_WITH_SITE
     }
 
     public ObjectRequest(Core core, Call call){
@@ -65,6 +67,10 @@ public class ObjectRequest extends Core {
             url="punishment/create/";
         } else if(this.call==Call.REGEN_HASH){
             url="key/regen/";
+        } else if(this.call==Call.SETUP_VOTING_SITE){
+            url="voting/site/setup/";
+        } else if(this.call==Call.VOTE_WITH_SITE){
+            url="instance/network/voting/with/site/";
         }
 
         if(url!=null){

@@ -33,7 +33,8 @@ public class ArrayRequest extends Core {
         GET_PENDING_EXECUTIONS,
         GET_PENDING_EXECUTIONS_REDUCED,
         GET_OFFENCE_LIST,
-        GET_ALL_KEYS
+        GET_ALL_KEYS,
+        GET_VOTING_SITES_CONFIG
     }
 
     public ArrayRequest(Core core, Call call, LinkedHashMap<String, String> params){
@@ -66,6 +67,8 @@ public class ArrayRequest extends Core {
             url="punishment/offence/list/";
         } else if(this.call == Call.GET_ALL_KEYS){
             url="key/list/all/";
+        } else if(this.call == Call.GET_VOTING_SITES_CONFIG){
+            url="instance/network/voting/site/list/setup/config/";
         }
 
         if(url!=null){

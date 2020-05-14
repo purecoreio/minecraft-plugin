@@ -1,7 +1,7 @@
-main: io.purecore.plugin.spigot.Main
+main: io.purecore.mcplugin.spigot.Main
 author: quiquelhappy
 name: purecore
-version: "1.1"
+version: "1.2"
 api-version: 1.13
 description: A complete solution for your Minecraft Server with payments, analytics, forums, punishments and much more!
 commands:
@@ -29,4 +29,4 @@ commands:
     description: Regenerates the current key hash
     aliases: [purecore regenkey,c regenkey,pc regenkey,core regenkey,p regenkey]
     permission: purecore.key.regen
-    usage: Please, use /&lt;command&gt; to create a punishment
+    usage: Please, use /&lt;command&gt; to regen the keys
