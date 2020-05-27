@@ -1,7 +1,7 @@
 main: io.purecore.mcplugin.spigot.Main
 author: quiquelhappy
 name: purecore
-version: "1.2"
+version: "1.0.1"
 api-version: 1.13
 description: A complete solution for your Minecraft Server with payments, analytics, forums, punishments and much more!
 commands:
