@@ -4,8 +4,11 @@ import io.purecore.api.exception.ApiException;
 import io.purecore.api.exception.CallException;
 import io.purecore.api.instance.Instance;
 import io.purecore.api.key.Key;
+import io.purecore.api.sockets.CoreSocket;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.logging.Logger;
 
 public class Core {
 
@@ -27,12 +30,22 @@ public class Core {
     }
 
     public Key getKeyLegacy(){
-
         return new Key(this.key);
+    }
 
+    public Core getCore(){
+        return this;
     }
 
     public Instance getInstance() throws ApiException, IOException, CallException {
         return new Instance(this);
+    }
+
+    public CoreSocket getSocket() throws URISyntaxException {
+        return new CoreSocket(this);
+    }
+
+    public CoreSocket getSocket(Logger logger) throws URISyntaxException {
+        return new CoreSocket(this, logger);
     }
 }

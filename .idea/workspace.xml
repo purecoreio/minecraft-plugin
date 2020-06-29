@@ -21,50 +21,34 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="updated versioning">
+      <change afterPath="$PROJECT_DIR$/src/io/purecore/api/connection/ConnectionDestroyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/io/purecore/api/connection/ConnectionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/io/purecore/api/sockets/CoreSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/io/purecore/mcplugin/util/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/plugin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/bungee.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/bungee.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bungee.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/Core.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/advancement/Advancement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/command/Context.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/command/Execution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/connection/Connection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/connection/Status.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/exception/ApiException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/exception/CallException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Instance$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Instance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Network.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Settings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/key/Key$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/key/Key.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/location/Location.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/punishment/Offence$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/punishment/Offence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/punishment/Punishment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ArrayRequest$Call.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ArrayRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ObjectRequest$Call.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ObjectRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/statistic/Specific.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/statistic/Statistic$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/statistic/Statistic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/user/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/keys.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/api/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/Commands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Chat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Inventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Sessions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Votifier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/gui/CreatePunishment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/tasks/MarkPending.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +97,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../purevanilla/ViaVersion/bungee" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -123,6 +107,10 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="io.purecore.plugin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\quique\Documents\git\core\plugin\old\spigot" />
+      <recent name="C:\Users\quique\Documents\git\core\plugin\old" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -172,8 +160,22 @@
       <workItem from="1587121868810" duration="613000" />
       <workItem from="1587413126555" duration="625000" />
       <workItem from="1590577541386" duration="594000" />
-      <workItem from="1590578157142" duration="1049000" />
+      <workItem from="1590578157142" duration="1276000" />
+      <workItem from="1591260313357" duration="362000" />
+      <workItem from="1591620488483" duration="8715000" />
+      <workItem from="1591906156116" duration="247000" />
+      <workItem from="1591962066691" duration="664000" />
+      <workItem from="1591989525576" duration="1833000" />
+      <workItem from="1592055756869" duration="15000" />
     </task>
+    <task id="LOCAL-00001" summary="updated versioning">
+      <created>1590579777755</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590579777755</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +193,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated versioning" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated versioning" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="872" y="178" key="#Project_Structure" timestamp="1590578081881">
       <screen x="0" y="0" width="2560" height="1040" />
@@ -200,6 +206,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1010" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1584404977999" />
+    <state x="924" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591623147209">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="924" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1591623147209" />
     <state x="1010" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1584400405384">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -208,41 +218,53 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1010" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1584800239268" />
-    <state x="1060" y="261" key="FileChooserDialogImpl" timestamp="1584722631208">
+    <state x="92" y="92" width="2376" height="856" key="DiffContextDialog" timestamp="1590579941438">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1060" y="261" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1584722631208" />
-    <state width="2517" height="282" key="GridCell.Tab.0.bottom" timestamp="1590579704963">
+    <state x="92" y="92" width="2376" height="856" key="DiffContextDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1590579941438" />
+    <state x="1060" y="261" key="FileChooserDialogImpl" timestamp="1591962079200">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="282" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704963" />
-    <state width="2517" height="282" key="GridCell.Tab.0.center" timestamp="1590579704963">
+    <state x="1060" y="261" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1591962079200" />
+    <state width="2517" height="282" key="GridCell.Tab.0.bottom" timestamp="1591632570340">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="282" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704963" />
-    <state width="2517" height="282" key="GridCell.Tab.0.left" timestamp="1590579704962">
+    <state width="2517" height="282" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1591632570340" />
+    <state width="2517" height="282" key="GridCell.Tab.0.center" timestamp="1591632570339">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="282" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704962" />
-    <state width="2517" height="282" key="GridCell.Tab.0.right" timestamp="1590579704963">
+    <state width="2517" height="282" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1591632570339" />
+    <state width="2517" height="282" key="GridCell.Tab.0.left" timestamp="1591632570339">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="282" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704963" />
-    <state x="760" y="94" key="SettingsEditor" timestamp="1590578185984">
+    <state width="2517" height="282" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1591632570339" />
+    <state width="2517" height="282" key="GridCell.Tab.0.right" timestamp="1591632570340">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="760" y="94" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1590578185984" />
+    <state width="2517" height="282" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1591632570340" />
+    <state x="760" y="94" key="SettingsEditor" timestamp="1591620507056">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="760" y="94" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1591620507056" />
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2" timestamp="1590579890360">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="872" y="253" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1590579890360" />
     <state x="344" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586023448807">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="344" y="343" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1586023448807" />
-    <state x="662" y="215" key="new project wizard" timestamp="1585173801934">
+    <state x="1089" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590579813195">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="662" y="215" key="new project wizard/0.0.2560.1040@0.0.2560.1040" timestamp="1585173801934" />
-    <state x="1576" y="244" width="672" height="677" key="run.anything.popup" timestamp="1590579704946">
+    <state x="1089" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1040@0.0.2560.1040" timestamp="1590579813195" />
+    <state x="662" y="215" key="new project wizard" timestamp="1591962109520">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1576" y="244" width="672" height="677" key="run.anything.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704946" />
+    <state x="662" y="215" key="new project wizard/0.0.2560.1040@0.0.2560.1040" timestamp="1591962109520" />
+    <state x="1576" y="244" width="672" height="677" key="run.anything.popup" timestamp="1591629915070">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1576" y="244" width="672" height="677" key="run.anything.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1591629915070" />
   </component>
 </project>
