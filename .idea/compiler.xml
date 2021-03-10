@@ -7,13 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="purecore" />
-        <module name="mcplugin" />
+        <module name="universal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="api" target="8" />
+      <module name="bungeecord" target="8" />
       <module name="mcpluigin" target="8" />
       <module name="plugin" target="8" />
+      <module name="spigot" target="8" />
+      <module name="untitled" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

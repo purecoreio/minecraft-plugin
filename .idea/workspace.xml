@@ -5,6 +5,9 @@
       <artifact name="purecore" />
     </artifacts-to-build>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,46 +28,83 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/purecore_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/resources/bungee.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/resources/cache.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/resources/plugin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/API.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/CacheData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/PluginException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/Cache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/Instance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/Updater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/events/BungeeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Cache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/CommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Instance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Updater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/AdvancedBanHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/BukkitHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/EssentialsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/LiteBansHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/NuVotifierHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/plugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/plugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/bungee.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/bungee.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bungee.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/Core.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/advancement/Advancement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/command/Command.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/command/Context.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/command/Execution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/connection/Connection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/connection/Status.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/exception/ApiException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/exception/CallException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Instance$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Instance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Network.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/instance/Settings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/key/Key$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/key/Key.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/location/Location.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/punishment/Offence$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/punishment/Offence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/punishment/Punishment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ArrayRequest$Call.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ArrayRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ObjectRequest$Call.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/request/ObjectRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/statistic/Specific.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/statistic/Statistic$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/statistic/Statistic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/purecore/api/user/Player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/keys.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/bungee.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/keys.yml" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/Core.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/advancement/Advancement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/command/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/command/Context.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/command/Execution.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/connection/Connection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/connection/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/exception/ApiException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/exception/CallException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Instance.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Network.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Settings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/key/Key.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/location/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/punishment/Offence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/punishment/Punishment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/request/ArrayRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/request/ObjectRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/statistic/Specific.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/statistic/Statistic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/user/Owner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/user/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/voting/VotingSite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/voting/VotingSiteConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/cmd/Handler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/events/Sessions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/events/Votifier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/task/BroadcastSettings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/Commands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Chat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Inventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Sessions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Votifier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/gui/CreatePunishment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/tasks/MarkPending.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/sponge/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/util/Logging.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/util/Title.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/util/Updater.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,12 +128,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\quique\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.7660.26\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1SEWfIuK0GWMsD6nxyRL4Rub301" />
   <component name="ProjectLevelVcsManager">
@@ -104,37 +152,75 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="purecore" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../purecore-java" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\quique\Documents\git\core\minecraft-plugin\module\bungeecord\src\io\purecore\mcplugin" />
+      <recent name="C:\Users\quique\Documents\git\core\minecraft-plugin\module\spigot\src\io\purecore\mcplugin" />
+      <recent name="C:\Users\quique\Documents\git\core\minecraft-plugin\module\bungeecord\src" />
+      <recent name="C:\Users\quique\Documents\git\core\minecraft-plugin\module\bungeecord" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\quique\Documents\git\core\minecraft-plugin\module\bungeecord\resources" />
+      <recent name="C:\Users\quique\Documents\git\core\minecraft-plugin\module\spigot\resources" />
+      <recent name="C:\Users\quique\Documents\git\core\minecraft-plugin\src\spigot\src" />
+      <recent name="C:\Users\quique\Documents\git\core\minecraft-plugin\src" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="io.purecore.mcplugin" />
       <recent name="io.purecore.plugin" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.purecore.mcplugin.bungee" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn deploy" />
+      <command value="mvn clean build" />
+      <command value="mvn clean" />
       <command value="mvn compile" />
       <command value="mvn install" />
-      <command value="mvn clean" />
-      <command value="mvn clean build" />
       <command value="mvn clean install" />
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -173,11 +259,24 @@
       <workItem from="1587413126555" duration="625000" />
       <workItem from="1590577541386" duration="594000" />
       <workItem from="1590578157142" duration="1049000" />
+      <workItem from="1610888491495" duration="350000" />
+      <workItem from="1610888856669" duration="5263000" />
+      <workItem from="1610894180249" duration="630000" />
+      <workItem from="1610894826963" duration="7840000" />
+      <workItem from="1610966147732" duration="10451000" />
+      <workItem from="1611005444763" duration="5106000" />
+      <workItem from="1611093921171" duration="3337000" />
+      <workItem from="1611098018899" duration="939000" />
+      <workItem from="1611176827398" duration="6221000" />
+      <workItem from="1611184901723" duration="8051000" />
+      <workItem from="1611657446449" duration="746000" />
+      <workItem from="1612268155143" duration="687000" />
+      <workItem from="1615360033092" duration="12702000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -191,58 +290,7 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="872" y="178" key="#Project_Structure" timestamp="1590578081881">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="872" y="178" key="#Project_Structure/0.0.2560.1040@0.0.2560.1040" timestamp="1590578081881" />
-    <state x="1010" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1584404977999">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1010" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1584404977999" />
-    <state x="1010" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1584400405384">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1010" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1584400405384" />
-    <state x="1010" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1584800239268">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1010" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1584800239268" />
-    <state x="1060" y="261" key="FileChooserDialogImpl" timestamp="1584722631208">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1060" y="261" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1584722631208" />
-    <state width="2517" height="282" key="GridCell.Tab.0.bottom" timestamp="1590579704963">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state width="2517" height="282" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704963" />
-    <state width="2517" height="282" key="GridCell.Tab.0.center" timestamp="1590579704963">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state width="2517" height="282" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704963" />
-    <state width="2517" height="282" key="GridCell.Tab.0.left" timestamp="1590579704962">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state width="2517" height="282" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704962" />
-    <state width="2517" height="282" key="GridCell.Tab.0.right" timestamp="1590579704963">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state width="2517" height="282" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704963" />
-    <state x="760" y="94" key="SettingsEditor" timestamp="1590578185984">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="760" y="94" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1590578185984" />
-    <state x="344" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586023448807">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="344" y="343" key="com.intellij.ide.util.TipDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1586023448807" />
-    <state x="662" y="215" key="new project wizard" timestamp="1585173801934">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="662" y="215" key="new project wizard/0.0.2560.1040@0.0.2560.1040" timestamp="1585173801934" />
-    <state x="1576" y="244" width="672" height="677" key="run.anything.popup" timestamp="1590579704946">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1576" y="244" width="672" height="677" key="run.anything.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1590579704946" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
