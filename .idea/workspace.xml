@@ -27,21 +27,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/commandHandler/CommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/commandHandler/FiveteenAndDown.java" afterDir="false" />
+    <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="support for pre 1.16 bukkit versions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/commandHandler/SixteenAndUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Instance.java" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Instance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/CommandHandler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/CommandHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance.class" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/universal/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/universal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/universal/target/original-purecore-universal.jar" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/original-purecore-universal.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/universal/target/purecore-universal.jar" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/purecore-universal.jar" afterDir="false" />
     </list>
@@ -210,8 +198,18 @@
       <workItem from="1611657446449" duration="746000" />
       <workItem from="1612268155143" duration="687000" />
       <workItem from="1615360033092" duration="13332000" />
-      <workItem from="1615448732843" duration="2871000" />
+      <workItem from="1615448732843" duration="3052000" />
+      <workItem from="1615451949833" duration="595000" />
+      <workItem from="1615467134955" duration="725000" />
     </task>
+    <task id="LOCAL-00001" summary="support for pre 1.16 bukkit versions">
+      <created>1615451708346</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615451708346</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,5 +229,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="support for pre 1.16 bukkit versions" />
+    <option name="LAST_COMMIT_MESSAGE" value="support for pre 1.16 bukkit versions" />
   </component>
 </project>

@@ -4,7 +4,7 @@ import io.purecore.api.Core;
 
 public class API {
 
-    protected static String currentRelease = "5af58ea03c7f0c02";
+    protected static String currentRelease = "b8c0e54231910b24";
     public static String getCurrentRelease(){
         return  API.currentRelease;
     }
