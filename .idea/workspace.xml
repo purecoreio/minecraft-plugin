@@ -28,83 +28,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/purecore_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/resources/bungee.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/resources/cache.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/resources/plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/API.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/CacheData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/PluginException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/Cache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/Instance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/Updater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/bungee/events/BungeeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Cache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/CommandHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Instance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Updater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/AdvancedBanHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/BukkitHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/EssentialsHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/LiteBansHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/events/NuVotifierHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/commandHandler/CommandHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/commandHandler/FiveteenAndDown.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/bungee.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/keys.yml" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/Core.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/advancement/Advancement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/command/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/command/Context.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/command/Execution.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/connection/Connection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/connection/Status.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/exception/ApiException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/exception/CallException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Instance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Network.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/instance/Settings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/key/Key.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/location/Location.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/punishment/Offence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/punishment/Punishment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/request/ArrayRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/request/ObjectRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/statistic/Specific.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/statistic/Statistic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/user/Owner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/user/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/voting/VotingSite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/api/voting/VotingSiteConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/cmd/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/events/Sessions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/events/Votifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/bungee/task/BroadcastSettings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/Commands.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Chat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Inventory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Sessions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/events/Votifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/gui/CreatePunishment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/spigot/tasks/MarkPending.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/sponge/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/util/Logging.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/util/Title.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/io/purecore/mcplugin/util/Updater.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/commandHandler/SixteenAndUp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Instance.java" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Instance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/CommandHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/CommandHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance.class" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/classes/io/purecore/mcplugin/spigot/Instance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/original-purecore-universal.jar" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/original-purecore-universal.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/target/purecore-universal.jar" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/target/purecore-universal.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +69,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -172,7 +112,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -206,15 +146,13 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -271,7 +209,8 @@
       <workItem from="1611184901723" duration="8051000" />
       <workItem from="1611657446449" duration="746000" />
       <workItem from="1612268155143" duration="687000" />
-      <workItem from="1615360033092" duration="12702000" />
+      <workItem from="1615360033092" duration="13332000" />
+      <workItem from="1615448732843" duration="2871000" />
     </task>
     <servers />
   </component>

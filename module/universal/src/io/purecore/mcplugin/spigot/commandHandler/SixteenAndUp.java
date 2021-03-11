@@ -1,4 +1,4 @@
-package io.purecore.mcplugin.spigot;
+package io.purecore.mcplugin.spigot.commandHandler;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
@@ -7,6 +7,7 @@ import co.aikar.commands.annotation.Description;
 import co.aikar.commands.annotation.Subcommand;
 import io.purecore.api.call.ApiException;
 import io.purecore.mcplugin.PluginException;
+import io.purecore.mcplugin.spigot.Instance;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
@@ -17,11 +18,11 @@ import org.bukkit.command.CommandSender;
 import java.io.IOException;
 
 @CommandAlias("purecore")
-public class CommandHandler extends BaseCommand {
+public class SixteenAndUp extends BaseCommand implements CommandHandler {
 
     Instance instance;
 
-    public CommandHandler(Instance instance){
+    public SixteenAndUp(Instance instance){
         this.instance=instance;
     }
 
@@ -55,7 +56,7 @@ public class CommandHandler extends BaseCommand {
         reloadProcedure(sender);
     }
 
-    private void reloadProcedure(CommandSender sender) {
+    public void reloadProcedure(CommandSender sender) {
 
         TextComponent icon = new TextComponent(" •  ");
         icon.setColor(ChatColor.of("#42a4ff"));

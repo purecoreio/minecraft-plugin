@@ -10,6 +10,8 @@ import io.purecore.api.versioning.InvalidVersionFormatException;
 import io.purecore.api.versioning.Version;
 import io.purecore.mcplugin.API;
 import io.purecore.mcplugin.PluginException;
+import io.purecore.mcplugin.spigot.commandHandler.FiveteenAndDown;
+import io.purecore.mcplugin.spigot.commandHandler.SixteenAndUp;
 import io.purecore.mcplugin.spigot.events.BukkitHandler;
 import io.purecore.mcplugin.spigot.events.EssentialsHandler;
 import io.purecore.mcplugin.spigot.events.LiteBansHandler;
@@ -89,7 +91,21 @@ public class Instance extends JavaPlugin {
         // commands
 
         PaperCommandManager manager = new PaperCommandManager(this);
-        manager.registerCommand(new CommandHandler(this));
+        String version = Bukkit.getServer().getClass().getPackage().getName().replace('.', ',').split(",")[3].toLowerCase().replace("v","").replace("r","").replaceAll("_",".");
+
+        try {
+            float versionRepresentative = Version.getRepresentativePart(version);
+            this.getLogger().log(Level.INFO,"Loading commands for version "+version+" ("+versionRepresentative+")");
+            if(versionRepresentative<1.16){
+                manager.registerCommand(new FiveteenAndDown(this));
+            } else {
+                manager.registerCommand(new SixteenAndUp(this));
+            }
+        } catch (InvalidVersionFormatException e) {
+            this.getLogger().log(Level.INFO,"Loading legacy commands");
+            manager.registerCommand(new SixteenAndUp(this));
+        }
+
 
         // core start
 
