@@ -3,6 +3,11 @@ main: io.purecore.mcplugin.spigot.Instance
 author: quiquelhappy
 version: 1.0.0
 description: All-in-one server managment tool
+softdepend:
+  - Essentials
+  - AdvancedBan
+  - LiteBans
+  - Votifier
 commands:
   key:
     description: Saves the key and reloads the plugin

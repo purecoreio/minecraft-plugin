@@ -34,13 +34,27 @@ public class Instance extends JavaPlugin {
     private static Cache cache;
     private static File cacheFile;
 
-    private boolean hasLiteBansHandler;
-
     public static io.purecore.mcplugin.spigot.Cache getCache(){
         return Instance.cache;
     }
     public static File getCacheFile(){
         return Instance.cacheFile;
+    }
+
+    private static boolean essentials = false;
+    private static boolean litebans = false;
+    private static boolean advancedban = false;
+
+    public static boolean isEssentialsEnabled(){
+        return Instance.essentials;
+    }
+
+    public static boolean isLiteBansEnabled(){
+        return Instance.litebans;
+    }
+
+    public static boolean isAdvancedbanEnabled(){
+        return Instance.advancedban;
     }
 
     @Override
@@ -59,21 +73,22 @@ public class Instance extends JavaPlugin {
         // integration handlers
 
         if(this.getServer().getPluginManager().isPluginEnabled("AdvancedBan")){
-            if(!hasLiteBansHandler){
-                hasLiteBansHandler=true;
+            if(!Instance.isLiteBansEnabled()){
                 new LiteBansHandler(this);
+                Instance.advancedban = true;
             }
         }
 
         if(this.getServer().getPluginManager().isPluginEnabled("LiteBans")){
-            if(!hasLiteBansHandler){
-                hasLiteBansHandler=true;
+            if(!Instance.isLiteBansEnabled()){
                 new LiteBansHandler(this);
+                Instance.litebans = true;
             }
         }
 
         if(this.getServer().getPluginManager().isPluginEnabled("Essentials")){
             this.getServer().getPluginManager().registerEvents(new EssentialsHandler(this), this);
+            Instance.essentials = true;
         }
 
         if(this.getServer().getPluginManager().isPluginEnabled("Votifier")){
