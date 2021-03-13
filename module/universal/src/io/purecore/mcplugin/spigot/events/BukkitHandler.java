@@ -122,7 +122,7 @@ public class BukkitHandler implements Listener {
     }
 
     private void unbanHandler(Player player, String command){
-        if((player == null || player.hasPermission(command)) && command.startsWith("minecraft:pardon ") || command.startsWith("pardon ") || (Instance.isEssentialsEnabled() && !Instance.isLiteBansEnabled() && !Instance.isAdvancedbanEnabled() && (command.startsWith("unban"))) || (Instance.isEssentialsEnabled() && command.startsWith("essentials:unban"))){
+        if((player == null || player.hasPermission(command)) && command.startsWith("minecraft:pardon ") || command.startsWith("pardon ") || (Instance.isEssentialsEnabled() && !Instance.isLiteBansEnabled() && !Instance.isAdvancedbanEnabled() && (command.startsWith("unban "))) || (Instance.isEssentialsEnabled() && command.startsWith("essentials:unban"))){
 
             String moderatorId = null;
             if(player!=null) moderatorId = player.getUniqueId().toString();
