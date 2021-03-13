@@ -10,7 +10,10 @@ import io.purecore.api.versioning.InvalidVersionFormatException;
 import io.purecore.api.versioning.Version;
 import io.purecore.mcplugin.API;
 import io.purecore.mcplugin.PluginException;
+import io.purecore.mcplugin.bungee.events.AdvancedBanHandler;
 import io.purecore.mcplugin.bungee.events.BungeeHandler;
+import io.purecore.mcplugin.bungee.events.LiteBansHandler;
+import io.purecore.mcplugin.bungee.events.NuVotifierHandler;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
@@ -42,8 +45,26 @@ public class Instance extends Plugin {
         super.onEnable();
         Core.setClientVersion(API.getCurrentRelease());
         try {
-            this.getLogger().log(Level.INFO,"purecore has been enabled. Feel free to join our Discord server: https://discord.gg/rhpcSnK");
+
+            if(handler==null){
+                Instance.handler=new Handler(this.getLogger(),this);
+            }
+
             getProxy().getPluginManager().registerListener(this, new BungeeHandler(this));
+
+            if(this.getProxy().getPluginManager().getPlugin("LiteBans")!=null){
+                new LiteBansHandler(this);
+            }
+
+            if(this.getProxy().getPluginManager().getPlugin("AdvancedBan")!=null){
+                getProxy().getPluginManager().registerListener(this, new AdvancedBanHandler(this));
+            }
+
+            if(this.getProxy().getPluginManager().getPlugin("NuVotifier")!=null){
+                getProxy().getPluginManager().registerListener(this, new NuVotifierHandler(this));
+            }
+
+            this.getLogger().log(Level.INFO,"purecore has been enabled. Feel free to join our Discord server: https://discord.gg/rhpcSnK");
             this.reload();
             ProxyServer.getInstance().getScheduler().runAsync(this, new Runnable() {
                 @Override
@@ -59,10 +80,6 @@ public class Instance extends Plugin {
     public void reload() throws PluginException {
 
         try {
-
-            if(handler==null){
-                Instance.handler=new Handler(this.getLogger(),this);
-            }
 
             if (!getDataFolder().exists()) {
                 getDataFolder().mkdir();
