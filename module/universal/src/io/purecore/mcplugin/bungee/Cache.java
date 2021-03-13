@@ -5,7 +5,6 @@ import io.purecore.api.call.ApiException;
 import io.purecore.api.execution.ExecutionSuccess;
 import io.purecore.api.execution.SimplifiedExecution;
 import io.purecore.mcplugin.CacheData;
-import net.md_5.bungee.api.ProxyServer;
 
 import java.io.*;
 import java.util.ArrayList;
