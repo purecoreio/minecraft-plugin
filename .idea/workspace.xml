@@ -27,7 +27,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="support for pre 1.16 bukkit versions" />
+    <list default="true" id="f35edea7-8d41-4f42-9f7e-d18e9ff64f49" name="Default Changelist" comment="support for pre 1.16 bukkit versions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Instance.java" beforeDir="false" afterPath="$PROJECT_DIR$/module/universal/src/io/purecore/mcplugin/spigot/Instance.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,13 +132,15 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,7 +202,8 @@
       <workItem from="1615451949833" duration="595000" />
       <workItem from="1615467134955" duration="725000" />
       <workItem from="1615540227793" duration="10355000" />
-      <workItem from="1615625923105" duration="6010000" />
+      <workItem from="1615625923105" duration="6859000" />
+      <workItem from="1615742368933" duration="692000" />
     </task>
     <task id="LOCAL-00001" summary="support for pre 1.16 bukkit versions">
       <created>1615451708346</created>

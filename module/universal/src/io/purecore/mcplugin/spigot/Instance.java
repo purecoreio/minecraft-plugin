@@ -12,10 +12,7 @@ import io.purecore.mcplugin.API;
 import io.purecore.mcplugin.PluginException;
 import io.purecore.mcplugin.spigot.commandHandler.FiveteenAndDown;
 import io.purecore.mcplugin.spigot.commandHandler.SixteenAndUp;
-import io.purecore.mcplugin.spigot.events.BukkitHandler;
-import io.purecore.mcplugin.spigot.events.EssentialsHandler;
-import io.purecore.mcplugin.spigot.events.LiteBansHandler;
-import io.purecore.mcplugin.spigot.events.NuVotifierHandler;
+import io.purecore.mcplugin.spigot.events.*;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -74,7 +71,7 @@ public class Instance extends JavaPlugin {
 
         if(this.getServer().getPluginManager().isPluginEnabled("AdvancedBan")){
             if(!Instance.isLiteBansEnabled()){
-                new LiteBansHandler(this);
+                new AdvancedBanHandler(this);
                 Instance.advancedban = true;
             }
         }
