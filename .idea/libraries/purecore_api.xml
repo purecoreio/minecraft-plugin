@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="purecore-api">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../purecore-java/target/purecore-api.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
