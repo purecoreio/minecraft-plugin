@@ -1,0 +1,6 @@
+[submodule "minecraft-plugin-fabric"]
+	path = minecraft-plugin-fabric
+	url = https://github.com/purecoreio/minecraft-plugin-fabric
+[submodule "minecraft-plugin-java"]
+	path = minecraft-plugin-java
+	url = https://github.com/purecoreio/minecraft-plugin-java

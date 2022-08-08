@@ -1,2 +1,4 @@
 rootProject.name = 'minecraft'
 
+include 'minecraft-plugin-fabric'
+include 'minecraft-plugin-java'
